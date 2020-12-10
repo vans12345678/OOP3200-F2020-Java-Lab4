@@ -35,6 +35,6 @@ public abstract class Employee extends Person
     {
         double totalPay = 0.0;
 
-        return Math.round(totalPay * 100) / 100;
+        return (totalPay * 100) / 100;
     }
 }
