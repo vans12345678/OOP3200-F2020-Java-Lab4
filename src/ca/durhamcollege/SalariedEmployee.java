@@ -18,13 +18,14 @@ public class SalariedEmployee extends Employee
     public double getYearlySalary() {
         return yearlySalary;
     }
-
     public void setYearlySalary(double yearlySalary)
     {
+        //If yearly salary is positive number, set yearlySalary
         if(yearlySalary > 0.0)
         {
             this.yearlySalary = yearlySalary;
         }
+        //Otherwise throw exception and do not set yearlySalary
         else
         {
             throw new IllegalArgumentException("Yearly Salary must be a non-negative number.");
@@ -38,10 +39,11 @@ public class SalariedEmployee extends Employee
     {
         final int WEEKS = 52;
 
-        double weeklyPay = yearlySalary / WEEKS;
-        return Math.round(weeklyPay * 100) / 100;
+        double weeklyPay = (yearlySalary / WEEKS);
+        return (weeklyPay * 100) / 100;
     }
 
+    //To display Salaried Employee data members
     public void Display()
     {
         System.out.println("Name: " + getName());
